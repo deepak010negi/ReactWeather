@@ -7,10 +7,13 @@ var Main = React.createClass({
     return(
       <div>
         <Navigation/>
-        {this.props.children}
+        <div className="row">
+          <div className="columns medium-6 large-4 small-centered">
+            {this.props.children}
+          </div>
+        </div>
       </div>
     );
-        //<Weather/>
   }
 });
 
