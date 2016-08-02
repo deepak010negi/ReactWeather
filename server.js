@@ -4,6 +4,7 @@ var express = require('express');
 var app = express(); // call express lib as a function passing nothing as argument
 const PORT = process.env.PORT || 3000;
 
+// below function is redirect https traffic to http because openweatherapp api is preplanned and supports only http traffic
 // req might be index.html or bundle.js
 app.use(function(req, res, next) {
     if (req.headers['x-forwarded-proto' == 'http']){
@@ -17,7 +18,7 @@ app.use(function(req, res, next) {
 app.use(express.static('public'));
 // app.listen(to start the server) takes 2 args, port and the function which will be called when the server is up.
 app.listen(PORT, function() {
-    console.log('Express server is up on port ' + port);
+    console.log('Express server is up on port ' + PORT);
 });
 
 // start in package.json is to tell heroku where to start from
