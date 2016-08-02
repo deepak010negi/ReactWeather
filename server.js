@@ -7,10 +7,10 @@ const PORT = process.env.PORT || 3000;
 // below function is redirect https traffic to http because openweatherapp api is preplanned and supports only http traffic
 // req might be index.html or bundle.js
 app.use(function(req, res, next) {
-    if (req.headers['x-forwarded-proto' == 'http']){
-        next(); // it will let the req process as normal
+    if (req.headers['x-forwarded-proto'] === 'http'){
+        next();
     } else {
-        res.redirect('http://'+req.hostname+req.url);
+        res.redirect('http://'+ req.hostname + req.url);
     }
 });
 //app.use let us add functionality to our express application
