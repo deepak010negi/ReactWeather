@@ -8,6 +8,12 @@ var Weather = require('Weather');
 var About = require('About');
 var Example = require('Example');
 
+// load foundation......css! is css loader
+// style! to inject this into our html
+require('style!css!foundation-sites/dist/foundation.min.css');
+// firing up foundation.
+$(document).foundation();
+
 // Router tag is given to us by react Router lib, and it expects one prop
 // path is root of our application
 // component here is what we want to render for every single page
