@@ -14,6 +14,9 @@ require('style!css!foundation-sites/dist/foundation.min.css');
 // firing up foundation.
 $(document).foundation();
 
+// App css
+require('style!css!applicationStyles')
+
 // Router tag is given to us by react Router lib, and it expects one prop
 // path is root of our application
 // component here is what we want to render for every single page
