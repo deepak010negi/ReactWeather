@@ -15,7 +15,7 @@ require('style!css!foundation-sites/dist/foundation.min.css');
 $(document).foundation();
 
 // App css
-require('style!css!applicationStyles')
+require('style!css!sass!applicationStyles')
 
 // Router tag is given to us by react Router lib, and it expects one prop
 // path is root of our application
